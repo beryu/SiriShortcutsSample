@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import CoreSpotlight
-import Intents
 import RxSwift
 import RxCocoa
 import Nuke
@@ -68,22 +66,22 @@ final class SearchViewController: UIViewController {
             })
             .disposed(by: self.bag)
 
-        // Define activities
-        let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
-        userActivity.isEligibleForSearch = true
-        userActivity.title = "Playback"
-        userActivity.userInfo = ["key": "value"]
-        self.userActivity = userActivity
-
-        if #available(iOS 12.0, *) {
-            userActivity.isEligibleForPrediction = true
-            userActivity.suggestedInvocationPhrase = "Let's do it"
-            let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
-            attributes.contentDescription = "It's OK if you see this!"
-            userActivity.contentAttributeSet = attributes
-        }
-
-        userActivity.becomeCurrent()
+//        // Define activities
+//        let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+//        userActivity.isEligibleForSearch = true
+//        userActivity.title = "Playback"
+//        userActivity.userInfo = ["key": "value"]
+//        self.userActivity = userActivity
+//
+//        if #available(iOS 12.0, *) {
+//            userActivity.isEligibleForPrediction = true
+//            userActivity.suggestedInvocationPhrase = "Let's do it"
+//            let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
+//            attributes.contentDescription = "It's OK if you see this!"
+//            userActivity.contentAttributeSet = attributes
+//        }
+//
+//        userActivity.becomeCurrent()
     }
 
 
@@ -109,12 +107,20 @@ extension SearchViewController: UITableViewDataSource {
         if let url = URL(string: item.artworkUrl) {
             Nuke.loadImage(with: url, into: cell.artworkImageView)
         }
-        cell.titleLabel?.text = "\(item.collectionName)"
-        cell.artistLabel?.text = "\(item.artistName)"
+        cell.titleLabel.text = "\(item.collectionName)"
+        cell.artistLabel.text = "\(item.artistName)"
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let item = self.albums[indexPath.row]
+        let storyboard = UIStoryboard(name: "LookupViewController", bundle: nil)
+        guard let lookupVC = storyboard.instantiateViewController(withIdentifier: "LookupViewController") as? LookupViewController else {
+            // Maybe bug
+            fatalError()
+        }
+        lookupVC.collectionId = item.collectionId
+        self.navigationController?.pushViewController(lookupVC, animated: true)
     }
 }

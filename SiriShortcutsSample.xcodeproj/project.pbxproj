@@ -25,6 +25,8 @@
 		88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE620CF264D001D0016 /* ArtworkCell.swift */; };
 		88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAE720CF264D001D0016 /* ArtworkCell.xib */; };
 		88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CBFAEA20CF2838001D0016 /* Nuke.framework */; };
+		88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */; };
+		88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,8 @@
 		88CBFAE620CF264D001D0016 /* ArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
 		88CBFAE720CF264D001D0016 /* ArtworkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtworkCell.xib; sourceTree = "<group>"; };
 		88CBFAEA20CF2838001D0016 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LookupViewController.storyboard; sourceTree = "<group>"; };
+		88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				88CBFAE520CF2638001D0016 /* View */,
+				88CBFAEC20CF2BC8001D0016 /* Lookup */,
 				88CBFAE420CF261B001D0016 /* Search */,
 			);
 			path = UI;
@@ -181,6 +186,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		88CBFAEC20CF2BC8001D0016 /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */,
+				88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */,
+			);
+			path = Lookup;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +262,7 @@
 			files = (
 				88604EB120CE13A800728B17 /* LaunchScreen.storyboard in Resources */,
 				88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */,
+				88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */,
 				88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */,
 				88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */,
 			);
@@ -294,6 +309,7 @@
 				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
 				88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */,
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
+				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
