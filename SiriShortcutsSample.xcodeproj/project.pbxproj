@@ -12,11 +12,19 @@
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
 		88506BBD20CEAC2500D4989D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBB20CEAC2500D4989D /* Result.framework */; };
 		88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */; };
+		8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219720CF1E2C00544C8F /* LookupResponse.swift */; };
+		8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219820CF1E2C00544C8F /* LookupRequest.swift */; };
+		886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A220CF200F00544C8F /* RxCocoa.framework */; };
+		886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A420CF20DC00544C8F /* RxSwift.framework */; };
 		88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA620CE13A500728B17 /* AppDelegate.swift */; };
-		88604EA920CE13A500728B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA820CE13A500728B17 /* ViewController.swift */; };
-		88604EAC20CE13A500728B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAA20CE13A500728B17 /* Main.storyboard */; };
+		88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA820CE13A500728B17 /* SearchViewController.swift */; };
+		88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAA20CE13A500728B17 /* SearchViewController.storyboard */; };
 		88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAD20CE13A800728B17 /* Assets.xcassets */; };
 		88604EB120CE13A800728B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */; };
+		88CBFAE320CF241A001D0016 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE220CF241A001D0016 /* Structs.swift */; };
+		88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE620CF264D001D0016 /* ArtworkCell.swift */; };
+		88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAE720CF264D001D0016 /* ArtworkCell.xib */; };
+		88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CBFAEA20CF2838001D0016 /* Nuke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,13 +48,21 @@
 		88506BBA20CEAC2500D4989D /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		88506BBB20CEAC2500D4989D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
+		8860219720CF1E2C00544C8F /* LookupResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupResponse.swift; sourceTree = "<group>"; };
+		8860219820CF1E2C00544C8F /* LookupRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupRequest.swift; sourceTree = "<group>"; };
+		886021A220CF200F00544C8F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		886021A420CF20DC00544C8F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		88604EA320CE13A500728B17 /* SiriShortcutsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriShortcutsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88604EA620CE13A500728B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88604EA820CE13A500728B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88604EAB20CE13A500728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88604EA820CE13A500728B17 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		88604EAB20CE13A500728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchViewController.storyboard; sourceTree = "<group>"; };
 		88604EAD20CE13A800728B17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88604EB020CE13A800728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88604EB220CE13A800728B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88CBFAE220CF241A001D0016 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		88CBFAE620CF264D001D0016 /* ArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
+		88CBFAE720CF264D001D0016 /* ArtworkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtworkCell.xib; sourceTree = "<group>"; };
+		88CBFAEA20CF2838001D0016 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +70,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */,
 				88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */,
 				88506BBD20CEAC2500D4989D /* Result.framework in Frameworks */,
+				886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */,
+				886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,9 @@
 		88506B9820CE520600D4989D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88CBFAEA20CF2838001D0016 /* Nuke.framework */,
+				886021A420CF20DC00544C8F /* RxSwift.framework */,
+				886021A220CF200F00544C8F /* RxCocoa.framework */,
 				88506BBA20CEAC2500D4989D /* APIKit.framework */,
 				88506BBB20CEAC2500D4989D /* Result.framework */,
 				88506B9920CE520600D4989D /* IntentsUI.framework */,
@@ -75,7 +97,8 @@
 		88506BB220CEA7BA00D4989D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				88604EA820CE13A500728B17 /* ViewController.swift */,
+				88CBFAE520CF2638001D0016 /* View */,
+				88CBFAE420CF261B001D0016 /* Search */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -84,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */,
+				88CBFAE220CF241A001D0016 /* Structs.swift */,
+				8860219620CF1E2C00544C8F /* Lookup */,
 				88506BB420CEAA9700D4989D /* Search */,
 			);
 			path = Model;
@@ -96,6 +121,15 @@
 				88506BB620CEAA9700D4989D /* SearchResponse.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		8860219620CF1E2C00544C8F /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				8860219720CF1E2C00544C8F /* LookupResponse.swift */,
+				8860219820CF1E2C00544C8F /* LookupRequest.swift */,
+			);
+			path = Lookup;
 			sourceTree = "<group>";
 		};
 		88604E9A20CE13A400728B17 = {
@@ -122,12 +156,29 @@
 				88506BB220CEA7BA00D4989D /* UI */,
 				88506BB320CEAA8200D4989D /* Model */,
 				88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */,
-				88604EAA20CE13A500728B17 /* Main.storyboard */,
 				88604EAD20CE13A800728B17 /* Assets.xcassets */,
 				88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */,
 				88604EB220CE13A800728B17 /* Info.plist */,
 			);
 			path = SiriShortcutsSample;
+			sourceTree = "<group>";
+		};
+		88CBFAE420CF261B001D0016 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				88604EAA20CE13A500728B17 /* SearchViewController.storyboard */,
+				88604EA820CE13A500728B17 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		88CBFAE520CF2638001D0016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88CBFAE620CF264D001D0016 /* ArtworkCell.swift */,
+				88CBFAE720CF264D001D0016 /* ArtworkCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +248,8 @@
 			files = (
 				88604EB120CE13A800728B17 /* LaunchScreen.storyboard in Resources */,
 				88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */,
-				88604EAC20CE13A500728B17 /* Main.storyboard in Resources */,
+				88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */,
+				88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +266,9 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -232,22 +287,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */,
-				88604EA920CE13A500728B17 /* ViewController.swift in Sources */,
+				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
+				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
+				88CBFAE320CF241A001D0016 /* Structs.swift in Sources */,
 				88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */,
 				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
 				88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */,
+				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
+				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88604EAA20CE13A500728B17 /* Main.storyboard */ = {
+		88604EAA20CE13A500728B17 /* SearchViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				88604EAB20CE13A500728B17 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SearchViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */ = {

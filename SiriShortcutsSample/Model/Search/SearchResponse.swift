@@ -3,7 +3,7 @@
 //  SiriShortcutsSample
 //
 //  Created by Ryuta Kibe on 2017/11/17.
-//  Copyright © 2017 AWA Co. Ltd. All rights reserved.
+//  Copyright © 2018 blk. All rights reserved.
 //
 
 import Foundation

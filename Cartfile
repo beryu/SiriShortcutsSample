@@ -1,1 +1,3 @@
 github "ishkawa/APIKit"
+github "ReactiveX/RxSwift"
+github "kean/Nuke"
