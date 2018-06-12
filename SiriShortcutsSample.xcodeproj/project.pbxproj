@@ -27,6 +27,8 @@
 		88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CBFAEA20CF2838001D0016 /* Nuke.framework */; };
 		88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */; };
 		88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */; };
+		88CBFAF420D07AB5001D0016 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
+		88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF620D07D46001D0016 /* ControlViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +69,8 @@
 		88CBFAEA20CF2838001D0016 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LookupViewController.storyboard; sourceTree = "<group>"; };
 		88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
+		88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		88CBFAF620D07D46001D0016 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,10 @@
 		88506BB220CEA7BA00D4989D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				88CBFAE520CF2638001D0016 /* View */,
+				88CBFAF520D07D2A001D0016 /* Control */,
 				88CBFAEC20CF2BC8001D0016 /* Lookup */,
 				88CBFAE420CF261B001D0016 /* Search */,
+				88CBFAE520CF2638001D0016 /* View */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */,
 				88CBFAE220CF241A001D0016 /* Structs.swift */,
 				8860219620CF1E2C00544C8F /* Lookup */,
+				88CBFAF220D07AA6001D0016 /* Player */,
 				88506BB420CEAA9700D4989D /* Search */,
 			);
 			path = Model;
@@ -195,6 +201,22 @@
 			path = Lookup;
 			sourceTree = "<group>";
 		};
+		88CBFAF220D07AA6001D0016 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		88CBFAF520D07D2A001D0016 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				88CBFAF620D07D46001D0016 /* ControlViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +252,9 @@
 					88604EA220CE13A500728B17 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 0;
 							};
@@ -301,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CBFAF420D07AB5001D0016 /* MusicPlayer.swift in Sources */,
 				88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */,
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
 				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
@@ -310,6 +336,7 @@
 				88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */,
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
+				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
 				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

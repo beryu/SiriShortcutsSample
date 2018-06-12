@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 import RxSwift
 import RxCocoa
 import APIKit
@@ -38,6 +39,18 @@ final class LookupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.tableView.rx.itemSelected.asSignal()
+            .emit(onNext: { [weak self] (indexPath) in
+                guard
+                    let item = self?.albumDetail?.tracks[indexPath.row],
+                    let url = URL(string: item.previewUrl) else {
+                        return
+                }
+                MusicPlayer.shared.append(url: url)
+                MusicPlayer.shared.play()
+            })
+            .disposed(by: self.bag)
 
         // Load
         let request = LookupRequest(collectionId: collectionId)

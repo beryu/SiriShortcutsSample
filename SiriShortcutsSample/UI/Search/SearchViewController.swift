@@ -14,7 +14,7 @@ import APIKit
 
 final class SearchViewController: UIViewController {
 
-    // MARK: - Private properties
+    // MARK: - IBOutlet
 
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -24,6 +24,9 @@ final class SearchViewController: UIViewController {
             self.tableView.dataSource = self
         }
     }
+
+    // MARK: - Private properties
+
     private let searchBar: UISearchBar = UISearchBar(frame: .zero)
     private var albums: [EntityAlbum] = []
     private let bag = DisposeBag()
