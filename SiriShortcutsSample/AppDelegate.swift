@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if userActivity.activityType == "jp.blk.SiriShortcutsSample.my-activity-type" {
+        if userActivity.activityType == "jp.blk.SiriShortcutsSample.playback-activity-type" {
             print("😇 activity is called!")
             return true
         }

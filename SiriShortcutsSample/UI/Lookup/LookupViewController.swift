@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import AVFoundation
+import CoreSpotlight
+import Intents
 import RxSwift
 import RxCocoa
 import APIKit
@@ -29,11 +30,11 @@ final class LookupViewController: UIViewController {
             self.tableView.dataSource = self
         }
     }
-    private var albumDetail: EntityAlbumDetail?
 
     // MARK: - Private properties
 
-    let bag = DisposeBag()
+    private var albumDetail: EntityAlbumDetail?
+    private let bag = DisposeBag()
 
     // MARK: - Override methods
 
@@ -49,6 +50,24 @@ final class LookupViewController: UIViewController {
                 }
                 MusicPlayer.shared.append(url: url)
                 MusicPlayer.shared.play()
+
+                // Define activities
+                let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+                userActivity.isEligibleForSearch = true
+                userActivity.title = "\(item.trackName)を再生"
+                userActivity.userInfo = ["url": item.previewUrl]
+                self?.userActivity = userActivity
+
+                if #available(iOS 12.0, *) {
+                    userActivity.isEligibleForPrediction = true
+                    userActivity.suggestedInvocationPhrase = "\(item.trackName)を再生"
+                    let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
+                    attributes.contentDescription = "\(item.artistName) - \(item.collectionName)"
+                    userActivity.contentAttributeSet = attributes
+                }
+
+                userActivity.becomeCurrent()
+
             })
             .disposed(by: self.bag)
 
