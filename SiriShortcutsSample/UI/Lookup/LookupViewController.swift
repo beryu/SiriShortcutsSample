@@ -52,22 +52,35 @@ final class LookupViewController: UIViewController {
                 MusicPlayer.shared.play()
 
                 // Define activities
-                let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
-                userActivity.isEligibleForSearch = true
-                userActivity.title = "\(item.trackName)を再生"
-                userActivity.userInfo = ["url": item.previewUrl]
-                self?.userActivity = userActivity
+//                // Donate as User Activity
+//                let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+//                userActivity.isEligibleForSearch = true
+//                userActivity.title = "\(item.trackName)を再生"
+//                userActivity.addUserInfoEntries(from: ["previewUrl": url])
+//                userActivity.requiredUserInfoKeys = ["previewUrl"]
+//                self?.userActivity = userActivity
+//
+//                if #available(iOS 12.0, *) {
+//                    userActivity.isEligibleForPrediction = true
+//                    userActivity.suggestedInvocationPhrase = "\(item.trackName)を再生"
+//                    let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
+//                    attributes.contentDescription = "\(item.artistName) - \(item.collectionName)"
+//                    userActivity.contentAttributeSet = attributes
+//                }
+//
+//                userActivity.becomeCurrent()
 
+                // Donate as Interaction
                 if #available(iOS 12.0, *) {
-                    userActivity.isEligibleForPrediction = true
-                    userActivity.suggestedInvocationPhrase = "\(item.trackName)を再生"
-                    let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
-                    attributes.contentDescription = "\(item.artistName) - \(item.collectionName)"
-                    userActivity.contentAttributeSet = attributes
+                    let intent = MediaPlayIntent()
+                    intent.trackName = item.trackName
+                    let interaction = INInteraction(intent: intent, response: nil)
+                    interaction.donate(completion: { error in
+                        if let error = error {
+                            print("[ERROR] \(error.localizedDescription)")
+                        }
+                    })
                 }
-
-                userActivity.becomeCurrent()
-
             })
             .disposed(by: self.bag)
 

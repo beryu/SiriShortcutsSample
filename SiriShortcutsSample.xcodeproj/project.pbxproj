@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
+		883C62F120D555A300CDBEF9 /* MediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */; };
+		883C62F220D5561800CDBEF9 /* MediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */; };
 		88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB520CEAA9700D4989D /* SearchRequest.swift */; };
 		88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB620CEAA9700D4989D /* SearchResponse.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
@@ -29,7 +32,21 @@
 		88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */; };
 		88CBFAF420D07AB5001D0016 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
 		88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF620D07D46001D0016 /* ControlViewController.swift */; };
+		88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
+		88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		88CBFB4A20D08A54001D0016 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4920D08A54001D0016 /* Intents.intentdefinition */; };
+		88CBFB4B20D08A54001D0016 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4920D08A54001D0016 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88CBFB4320D08A3F001D0016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88604E9B20CE13A400728B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88CBFB3D20D08A3F001D0016;
+			remoteInfo = MediaPlayIntents;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		88506BAE20CE520700D4989D /* Embed App Extensions */ = {
@@ -38,6 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayIntentHandler.swift; sourceTree = "<group>"; };
 		88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsSample.entitlements; sourceTree = "<group>"; };
 		88506B9920CE520600D4989D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		88506BB520CEAA9700D4989D /* SearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
@@ -71,6 +90,10 @@
 		88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		88CBFAF620D07D46001D0016 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaPlayIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		88CBFB4020D08A3F001D0016 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		88CBFB4220D08A3F001D0016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88CBFB4920D08A54001D0016 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +106,13 @@
 				88506BBD20CEAC2500D4989D /* Result.framework in Frameworks */,
 				886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */,
 				886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CBFB3B20D08A3F001D0016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				88604EA520CE13A500728B17 /* SiriShortcutsSample */,
+				88CBFB3F20D08A3F001D0016 /* MediaPlayIntents */,
 				88506B9820CE520600D4989D /* Frameworks */,
 				88604EA420CE13A500728B17 /* Products */,
 			);
@@ -156,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				88604EA320CE13A500728B17 /* SiriShortcutsSample.app */,
+				88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +249,17 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		88CBFB3F20D08A3F001D0016 /* MediaPlayIntents */ = {
+			isa = PBXGroup;
+			children = (
+				88CBFB4020D08A3F001D0016 /* IntentHandler.swift */,
+				88CBFB4220D08A3F001D0016 /* Info.plist */,
+				88CBFB4920D08A54001D0016 /* Intents.intentdefinition */,
+				883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */,
+			);
+			path = MediaPlayIntents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,11 +276,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				88CBFB4420D08A3F001D0016 /* PBXTargetDependency */,
 			);
 			name = SiriShortcutsSample;
 			productName = SiriShortcutsSample;
 			productReference = 88604EA320CE13A500728B17 /* SiriShortcutsSample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88CBFB4820D08A3F001D0016 /* Build configuration list for PBXNativeTarget "MediaPlayIntents" */;
+			buildPhases = (
+				88CBFB3A20D08A3F001D0016 /* Sources */,
+				88CBFB3B20D08A3F001D0016 /* Frameworks */,
+				88CBFB3C20D08A3F001D0016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaPlayIntents;
+			productName = MediaPlayIntents;
+			productReference = 88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -260,6 +321,9 @@
 							};
 						};
 					};
+					88CBFB3D20D08A3F001D0016 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 88604E9E20CE13A400728B17 /* Build configuration list for PBXProject "SiriShortcutsSample" */;
@@ -276,6 +340,7 @@
 			projectRoot = "";
 			targets = (
 				88604EA220CE13A500728B17 /* SiriShortcutsSample */,
+				88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +355,13 @@
 				88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */,
 				88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */,
 				88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88CBFB3C20D08A3F001D0016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +402,8 @@
 				88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */,
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
 				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
+				883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */,
+				883C62F220D5561800CDBEF9 /* MediaPlayIntentHandler.swift in Sources */,
 				88CBFAE320CF241A001D0016 /* Structs.swift in Sources */,
 				88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */,
 				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
@@ -337,11 +411,30 @@
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
+				88CBFB4A20D08A54001D0016 /* Intents.intentdefinition in Sources */,
 				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88CBFB3A20D08A3F001D0016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CBFB4B20D08A54001D0016 /* Intents.intentdefinition in Sources */,
+				88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */,
+				883C62F120D555A300CDBEF9 /* MediaPlayIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88CBFB4420D08A3F001D0016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */;
+			targetProxy = 88CBFB4320D08A3F001D0016 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		88604EAA20CE13A500728B17 /* SearchViewController.storyboard */ = {
@@ -414,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -468,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -523,6 +616,48 @@
 			};
 			name = Release;
 		};
+		88CBFB4620D08A3F001D0016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				INFOPLIST_FILE = MediaPlayIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.blk.SiriShortcutsSample.${SAMPLE_CODE_DISAMBIGUATOR}.MediaPlayIntents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SAMPLE_CODE_DISAMBIGUATOR = "${DEVELOPMENT_TEAM}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88CBFB4720D08A3F001D0016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				INFOPLIST_FILE = MediaPlayIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.blk.SiriShortcutsSample.${SAMPLE_CODE_DISAMBIGUATOR}.MediaPlayIntents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SAMPLE_CODE_DISAMBIGUATOR = "${DEVELOPMENT_TEAM}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,6 +675,15 @@
 			buildConfigurations = (
 				88604EB620CE13A800728B17 /* Debug */,
 				88604EB720CE13A800728B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88CBFB4820D08A3F001D0016 /* Build configuration list for PBXNativeTarget "MediaPlayIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CBFB4620D08A3F001D0016 /* Debug */,
+				88CBFB4720D08A3F001D0016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
