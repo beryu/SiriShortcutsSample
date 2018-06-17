@@ -8,11 +8,11 @@
 
 import AVFoundation
 
-final class MusicPlayer {
-    static let shared = MusicPlayer()
+public final class MusicPlayer {
+    static public let shared = MusicPlayer()
     let player = AVQueuePlayer()
 
-    init() {
+    public init() {
         do {
             let audioSession = AVAudioSession.sharedInstance()
             try audioSession.setCategory(.playback, mode: .default, options: [])
@@ -22,20 +22,20 @@ final class MusicPlayer {
         }
     }
 
-    func append(url: URL) {
+    public func append(url: URL) {
         let item = AVPlayerItem(url: url)
         self.player.insert(item, after: self.player.items().last)
     }
 
-    func play() {
+    public func play() {
         self.player.play()
     }
 
-    func pause() {
+    public func pause() {
         self.player.pause()
     }
 
-    func skip() {
+    public func skip() {
         self.player.advanceToNextItem()
     }
 }

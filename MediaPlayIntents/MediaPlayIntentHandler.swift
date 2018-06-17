@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import MusicPlayer
 
 final class MediaPlayIntentHandler: NSObject, MediaPlayIntentHandling {
 
     func handle(intent: MediaPlayIntent, completion: @escaping (MediaPlayIntentResponse) -> Void) {
         // MARK: - MediaPlayIntentHandling
+        guard let previewUrl = intent.previewUrl else {
+            return
+        }
         print("👍handle called with \(intent.trackName)")
+        MusicPlayer.shared.append(url: previewUrl)
+        MusicPlayer.shared.play()
         completion(MediaPlayIntentResponse(code: .success, userActivity: nil))
     }
 }

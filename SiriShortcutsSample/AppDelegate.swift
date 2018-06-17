@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MusicPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

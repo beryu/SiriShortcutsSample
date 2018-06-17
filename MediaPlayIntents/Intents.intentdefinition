@@ -18,29 +18,29 @@
 			<key>INIntentCategory</key>
 			<string>generic</string>
 			<key>INIntentDescription</key>
-			<string>Playback using Siri Shortcuts Sample</string>
+			<string>Siri Shortcutsサンプルで再生</string>
 			<key>INIntentDescriptionID</key>
 			<string>3GTOC7</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>6</integer>
+			<integer>10</integer>
 			<key>INIntentName</key>
 			<string>MediaPlay</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>trackName</key>
+				<key>previewUrl,trackName</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
+					<false/>
 					<key>INIntentParameterCombinationSubtitle</key>
 					<string>${trackName}をSiri Shortcutsのサンプルで再生</string>
 					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>mIlI0x</string>
+					<string>31mNlo</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
 					<string>${trackName}をサンプルで再生</string>
 					<key>INIntentParameterCombinationTitleID</key>
-					<string>6qhDSj</string>
+					<string>f3V5LE</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
@@ -56,6 +56,18 @@
 					<integer>4</integer>
 					<key>INIntentParameterType</key>
 					<string>String</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterName</key>
+					<string>previewUrl</string>
+					<key>INIntentParameterSupportsMultipleValues</key>
+					<false/>
+					<key>INIntentParameterTag</key>
+					<integer>10</integer>
+					<key>INIntentParameterType</key>
+					<string>URL</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
@@ -91,7 +103,7 @@
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
 			<key>INIntentTitle</key>
-			<string>Playback track</string>
+			<string>トラックを再生</string>
 			<key>INIntentTitleID</key>
 			<string>S3GZyC</string>
 			<key>INIntentType</key>

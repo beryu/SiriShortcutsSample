@@ -13,6 +13,7 @@ import RxSwift
 import RxCocoa
 import APIKit
 import Nuke
+import MusicPlayer
 
 final class LookupViewController: UIViewController {
 
@@ -74,6 +75,7 @@ final class LookupViewController: UIViewController {
                 if #available(iOS 12.0, *) {
                     let intent = MediaPlayIntent()
                     intent.trackName = item.trackName
+                    intent.previewUrl = url
                     let interaction = INInteraction(intent: intent, response: nil)
                     interaction.donate(completion: { error in
                         if let error = error {
