@@ -9,16 +9,20 @@
 import Foundation
 import MusicPlayer
 
+@available(iOS 12.0, *)
 final class MediaPlayIntentHandler: NSObject, MediaPlayIntentHandling {
 
     func handle(intent: MediaPlayIntent, completion: @escaping (MediaPlayIntentResponse) -> Void) {
         // MARK: - MediaPlayIntentHandling
-        guard let previewUrl = intent.previewUrl else {
-            return
+        guard
+            let trackName = intent.trackName,
+            let previewUrl = intent.previewUrl else {
+                return
         }
-        print("👍handle called with \(intent.trackName)")
-        MusicPlayer.shared.append(url: previewUrl)
+        MusicPlayer.shared.set(url: previewUrl)
         MusicPlayer.shared.play()
-        completion(MediaPlayIntentResponse(code: .success, userActivity: nil))
+        let response = MediaPlayIntentResponse.success(trackName: trackName)
+        completion(response)
     }
+
 }

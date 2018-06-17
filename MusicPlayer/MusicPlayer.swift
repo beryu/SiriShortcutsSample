@@ -22,6 +22,12 @@ public final class MusicPlayer {
         }
     }
 
+    public func set(url: URL) {
+        let item = AVPlayerItem(url: url)
+        self.player.removeAllItems()
+        self.player.insert(item, after: nil)
+    }
+
     public func append(url: URL) {
         let item = AVPlayerItem(url: url)
         self.player.insert(item, after: self.player.items().last)

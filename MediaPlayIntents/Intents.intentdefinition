@@ -16,7 +16,7 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>generic</string>
+			<string>start</string>
 			<key>INIntentDescription</key>
 			<string>Siri Shortcutsサンプルで再生</string>
 			<key>INIntentDescriptionID</key>
@@ -86,7 +86,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string></string>
+						<string>${trackName}を再生します。</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>kfn125</string>
 						<key>INIntentResponseCodeName</key>
@@ -96,9 +96,22 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>INIntentResponseParameters</key>
-				<array/>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>trackName</string>
+						<key>INIntentResponseParameterSupportsMultipleValues</key>
+						<false/>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
 			</dict>
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
@@ -111,7 +124,7 @@
 			<key>INIntentUserConfirmationRequired</key>
 			<false/>
 			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>Start</string>
 		</dict>
 	</array>
 </dict>

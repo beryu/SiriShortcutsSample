@@ -49,7 +49,7 @@ final class LookupViewController: UIViewController {
                     let url = URL(string: item.previewUrl) else {
                         return
                 }
-                MusicPlayer.shared.append(url: url)
+                MusicPlayer.shared.set(url: url)
                 MusicPlayer.shared.play()
 
                 // Define activities

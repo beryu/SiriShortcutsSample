@@ -19,7 +19,10 @@ import Intents
 
 final class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
-        print("😇handler called")
-        return MediaPlayIntentHandler()
+        if #available(iOS 12.0, *) {
+            return MediaPlayIntentHandler()
+        } else {
+            return self
+        }
     }
 }
