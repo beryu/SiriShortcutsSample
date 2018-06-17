@@ -49,5 +49,4 @@ final class INPlayMediaIntentHandler: NSObject, INPlayMediaIntentHandling {
         completion(response)
     }
 
-
 }

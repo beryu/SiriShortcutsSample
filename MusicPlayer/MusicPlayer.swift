@@ -7,6 +7,7 @@
 //
 
 import AVFoundation
+import MediaPlayer
 
 public final class MusicPlayer {
     static public let shared = MusicPlayer()
@@ -15,7 +16,18 @@ public final class MusicPlayer {
     private let player = AVPlayer()
 
     public init() {
-        player.allowsExternalPlayback = true
+        self.player.allowsExternalPlayback = true
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.addTarget { [weak self] (_) -> MPRemoteCommandHandlerStatus in
+            self?.play()
+            return .success
+        }
+        commandCenter.playCommand.isEnabled = true
+        commandCenter.pauseCommand.addTarget { [weak self] (_) -> MPRemoteCommandHandlerStatus in
+            self?.pause()
+            return .success
+        }
+        commandCenter.pauseCommand.isEnabled = true
         do {
             let audioSession = AVAudioSession.sharedInstance()
             try audioSession.setCategory(.playback, mode: .default, policy: .longForm, options: [])
@@ -30,6 +42,14 @@ public final class MusicPlayer {
         self.url = url
         let item = AVPlayerItem(url: url)
         self.player.replaceCurrentItem(with: item)
+        let nowPlaying = MPNowPlayingInfoCenter.default()
+        nowPlaying.nowPlayingInfo = [
+            MPMediaItemPropertyTitle: trackName,
+            MPMediaItemPropertyPlaybackDuration: 30,
+            MPNowPlayingInfoPropertyElapsedPlaybackTime: 0,
+            MPMediaItemPropertyAssetURL: url
+        ]
+
     }
 
     public func play() {

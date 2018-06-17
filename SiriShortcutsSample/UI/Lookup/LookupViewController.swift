@@ -73,9 +73,12 @@ final class LookupViewController: UIViewController {
 
                 // Donate as Interaction
                 if #available(iOS 12.0, *) {
-                    let intent = StreamingMediaPlayIntent()
-                    intent.trackName = item.trackName
-                    intent.previewUrl = url
+                    let item = INMediaItem(
+                        identifier: url.absoluteString,
+                        title: item.trackName,
+                        type: .song,
+                        artwork: nil)
+                    let intent = INPlayMediaIntent(mediaItems: [item], mediaContainer: nil, playShuffled: false, playbackRepeatMode: .none, resumePlayback: true)
                     let interaction = INInteraction(intent: intent, response: nil)
                     interaction.donate(completion: { error in
                         if let error = error {
