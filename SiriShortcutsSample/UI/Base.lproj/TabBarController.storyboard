@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Control-->
+        <!--Control View Controller-->
         <scene sceneID="Wja-fu-uqU">
             <objects>
                 <viewController id="IIc-3Z-kCa" customClass="ControlViewController" customModule="SiriShortcutsSample" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aj8-uZ-SZ2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Control" id="86U-Qy-bOZ"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="86U-Qy-bOZ"/>
                     <connections>
                         <outlet property="pauseButton" destination="N9g-uI-NBT" id="863-Sl-OAg"/>
                         <outlet property="playButton" destination="aMv-zd-hhl" id="Abw-Cd-01H"/>
@@ -71,11 +71,11 @@
             </objects>
             <point key="canvasLocation" x="-1409" y="-632"/>
         </scene>
-        <!--Browse-->
+        <!--Navigation Controller-->
         <scene sceneID="kHx-J8-QR3">
             <objects>
                 <navigationController id="KgV-p4-6vO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browse" id="X27-Eb-oCP"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="X27-Eb-oCP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rMm-F0-Wsw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

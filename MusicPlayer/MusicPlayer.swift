@@ -40,7 +40,8 @@ public final class MusicPlayer {
     public func set(trackName: String, url: URL) {
         self.trackName = trackName
         self.url = url
-        let item = AVPlayerItem(url: url)
+        let asset = AVAsset(url: url)
+        let item = AVPlayerItem(asset: asset)
         self.player.replaceCurrentItem(with: item)
         let nowPlaying = MPNowPlayingInfoCenter.default()
         nowPlaying.nowPlayingInfo = [
