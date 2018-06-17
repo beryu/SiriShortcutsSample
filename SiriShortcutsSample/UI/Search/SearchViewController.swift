@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 import RxSwift
 import RxCocoa
 import Nuke

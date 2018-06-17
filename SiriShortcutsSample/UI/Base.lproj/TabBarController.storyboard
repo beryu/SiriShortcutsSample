@@ -27,8 +27,8 @@
                                 <state key="normal" title="Pause"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osy-A1-qfE">
-                                <rect key="frame" x="172.5" y="160" width="30" height="30"/>
-                                <state key="normal" title="Skip"/>
+                                <rect key="frame" x="161" y="160" width="53" height="30"/>
+                                <state key="normal" title="register"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +46,7 @@
                     <connections>
                         <outlet property="pauseButton" destination="N9g-uI-NBT" id="863-Sl-OAg"/>
                         <outlet property="playButton" destination="aMv-zd-hhl" id="Abw-Cd-01H"/>
-                        <outlet property="skipButton" destination="Osy-A1-qfE" id="16u-QG-IIh"/>
+                        <outlet property="registerButton" destination="Osy-A1-qfE" id="sTI-IY-KaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8v-1K-zgg" userLabel="First Responder" sceneMemberID="firstResponder"/>

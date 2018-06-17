@@ -24,7 +24,7 @@
 			<key>INIntentLastParameterTag</key>
 			<integer>10</integer>
 			<key>INIntentName</key>
-			<string>MediaPlay</string>
+			<string>StreamingMediaPlay</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
 				<key>previewUrl,trackName</key>

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
-		883C62F120D555A300CDBEF9 /* MediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */; };
-		883C62F220D5561800CDBEF9 /* MediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */; };
+		883C62F120D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */; };
+		883C62F220D5561800CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */; };
 		883C62FC20D5FB8A00CDBEF9 /* MusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
 		883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		883C630520D5FB9700CDBEF9 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
-		883C630620D5FBFA00CDBEF9 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4920D08A54001D0016 /* Intents.intentdefinition */; };
+		884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
+		884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
 		88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB520CEAA9700D4989D /* SearchRequest.swift */; };
 		88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB620CEAA9700D4989D /* SearchResponse.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
@@ -26,7 +27,7 @@
 		886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A420CF20DC00544C8F /* RxSwift.framework */; };
 		88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA620CE13A500728B17 /* AppDelegate.swift */; };
 		88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA820CE13A500728B17 /* SearchViewController.swift */; };
-		88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAA20CE13A500728B17 /* SearchViewController.storyboard */; };
+		88604EAC20CE13A500728B17 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAA20CE13A500728B17 /* TabBarController.storyboard */; };
 		88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAD20CE13A800728B17 /* Assets.xcassets */; };
 		88604EB120CE13A800728B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */; };
 		88CBFAE320CF241A001D0016 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE220CF241A001D0016 /* Structs.swift */; };
@@ -85,10 +86,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayIntentHandler.swift; sourceTree = "<group>"; };
+		883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingMediaPlayIntentHandler.swift; sourceTree = "<group>"; };
 		883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
 		883C62FB20D5FB8A00CDBEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INPlayMediaIntentHandler.swift; sourceTree = "<group>"; };
 		88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsSample.entitlements; sourceTree = "<group>"; };
 		88506B9920CE520600D4989D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		88506BB520CEAA9700D4989D /* SearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		88604EA320CE13A500728B17 /* SiriShortcutsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriShortcutsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88604EA620CE13A500728B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88604EA820CE13A500728B17 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		88604EAB20CE13A500728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchViewController.storyboard; sourceTree = "<group>"; };
+		88604EAB20CE13A500728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBarController.storyboard; sourceTree = "<group>"; };
 		88604EAD20CE13A800728B17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88604EB020CE13A800728B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88604EB220CE13A800728B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		88506BB220CEA7BA00D4989D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				88604EAA20CE13A500728B17 /* TabBarController.storyboard */,
 				88CBFAF520D07D2A001D0016 /* Control */,
 				88CBFAEC20CF2BC8001D0016 /* Lookup */,
 				88CBFAE420CF261B001D0016 /* Search */,
@@ -254,7 +257,6 @@
 		88CBFAE420CF261B001D0016 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				88604EAA20CE13A500728B17 /* SearchViewController.storyboard */,
 				88604EA820CE13A500728B17 /* SearchViewController.swift */,
 			);
 			path = Search;
@@ -299,7 +301,8 @@
 				88CBFB4020D08A3F001D0016 /* IntentHandler.swift */,
 				88CBFB4220D08A3F001D0016 /* Info.plist */,
 				88CBFB4920D08A54001D0016 /* Intents.intentdefinition */,
-				883C62F020D555A300CDBEF9 /* MediaPlayIntentHandler.swift */,
+				883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */,
+				884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */,
 			);
 			path = MediaPlayIntents;
 			sourceTree = "<group>";
@@ -440,7 +443,7 @@
 				88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */,
 				88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */,
 				88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */,
-				88604EAC20CE13A500728B17 /* SearchViewController.storyboard in Resources */,
+				88604EAC20CE13A500728B17 /* TabBarController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +487,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883C630620D5FBFA00CDBEF9 /* Intents.intentdefinition in Sources */,
 				883C630520D5FB9700CDBEF9 /* MusicPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +499,7 @@
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
 				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
 				883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */,
-				883C62F220D5561800CDBEF9 /* MediaPlayIntentHandler.swift in Sources */,
+				883C62F220D5561800CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */,
 				88CBFAE320CF241A001D0016 /* Structs.swift in Sources */,
 				88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */,
 				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
@@ -505,6 +507,7 @@
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
+				884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */,
 				88CBFB4A20D08A54001D0016 /* Intents.intentdefinition in Sources */,
 				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
@@ -516,7 +519,8 @@
 			files = (
 				88CBFB4B20D08A54001D0016 /* Intents.intentdefinition in Sources */,
 				88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */,
-				883C62F120D555A300CDBEF9 /* MediaPlayIntentHandler.swift in Sources */,
+				884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */,
+				883C62F120D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,12 +540,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		88604EAA20CE13A500728B17 /* SearchViewController.storyboard */ = {
+		88604EAA20CE13A500728B17 /* TabBarController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				88604EAB20CE13A500728B17 /* Base */,
 			);
-			name = SearchViewController.storyboard;
+			name = TabBarController.storyboard;
 			sourceTree = "<group>";
 		};
 		88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */ = {

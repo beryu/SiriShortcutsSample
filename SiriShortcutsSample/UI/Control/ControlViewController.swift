@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Intents
+import IntentsUI
 import RxSwift
 import RxCocoa
 import MusicPlayer
@@ -17,7 +19,7 @@ final class ControlViewController: UIViewController {
 
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var pauseButton: UIButton!
-    @IBOutlet private weak var skipButton: UIButton!
+    @IBOutlet private weak var registerButton: UIButton!
 
     // MARK: - Private properties
 
@@ -38,10 +40,47 @@ final class ControlViewController: UIViewController {
             })
             .disposed(by: self.bag)
 
-        self.skipButton.rx.tap.asSignal()
-            .emit(onNext: { _ in
-                MusicPlayer.shared.skip()
+        self.registerButton.rx.tap.asSignal()
+            .emit(onNext: { [weak self] _ in
+                self?.registerShortcuts()
             })
             .disposed(by: self.bag)
     }
+
+    private func registerShortcuts() {
+        if #available(iOS 12.0, *) {
+            let player = MusicPlayer.shared
+            guard
+                let trackName = player.trackName,
+                let previewUrl = player.url else {
+                    return
+            }
+
+            // Create interaction
+            let item = INMediaItem(identifier: previewUrl.absoluteString, title: trackName, type: .song, artwork: nil)
+            let intent = INPlayMediaIntent(mediaItems: [item], mediaContainer: nil, playShuffled: false, playbackRepeatMode: .none, resumePlayback: true)
+
+            // Donate Shortcut
+            guard let shortcut = INShortcut(intent: intent) else {
+                return
+            }
+            let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+}
+
+extension ControlViewController: INUIAddVoiceShortcutViewControllerDelegate {
+    @available(iOS 12.0, *)
+    func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
+    @available(iOS 12.0, *)
+    func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
+
 }

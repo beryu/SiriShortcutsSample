@@ -22,8 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         if userActivity.activityType == "jp.blk.SiriShortcutsSample.playback-activity-type",
+           let trackName = userActivity.userInfo?["trackName"] as? String,
            let url = userActivity.userInfo?["previewUrl"] as? URL {
-            MusicPlayer.shared.set(url: url)
+            MusicPlayer.shared.set(trackName: trackName, url: url)
             MusicPlayer.shared.play()
 
             return true

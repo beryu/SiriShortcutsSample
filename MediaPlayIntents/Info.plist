@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>MediaPlayIntents</string>
+	<string>Siri Sample</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,7 +30,8 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>MediaPlayIntent</string>
+				<string>INPlayMediaIntent</string>
+				<string>StreamingMediaPlayIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

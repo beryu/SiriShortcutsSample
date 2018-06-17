@@ -49,7 +49,7 @@ final class LookupViewController: UIViewController {
                     let url = URL(string: item.previewUrl) else {
                         return
                 }
-                MusicPlayer.shared.set(url: url)
+                MusicPlayer.shared.set(trackName: item.trackName, url: url)
                 MusicPlayer.shared.play()
 
                 // Define activities
@@ -73,7 +73,7 @@ final class LookupViewController: UIViewController {
 
                 // Donate as Interaction
                 if #available(iOS 12.0, *) {
-                    let intent = MediaPlayIntent()
+                    let intent = StreamingMediaPlayIntent()
                     intent.trackName = item.trackName
                     intent.previewUrl = url
                     let interaction = INInteraction(intent: intent, response: nil)

@@ -20,7 +20,14 @@ import Intents
 final class IntentHandler: INExtension {
     override func handler(for intent: INIntent) -> Any {
         if #available(iOS 12.0, *) {
-            return MediaPlayIntentHandler()
+            switch intent {
+            case is StreamingMediaPlayIntent:
+                return StreamingMediaPlayIntentHandler()
+            case is INPlayMediaIntent:
+                return INPlayMediaIntentHandler()
+            default:
+                return self
+            }
         } else {
             return self
         }
