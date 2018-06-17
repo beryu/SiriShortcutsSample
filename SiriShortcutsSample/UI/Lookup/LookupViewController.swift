@@ -53,42 +53,39 @@ final class LookupViewController: UIViewController {
                 MusicPlayer.shared.play()
 
                 // Define activities
-//                // Donate as User Activity
-//                let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
-//                userActivity.isEligibleForSearch = true
-//                userActivity.title = "\(item.trackName)を再生"
-//                userActivity.addUserInfoEntries(from: ["previewUrl": url])
-//                userActivity.requiredUserInfoKeys = ["previewUrl"]
-//                self?.userActivity = userActivity
-//
-//                if #available(iOS 12.0, *) {
-//                    userActivity.isEligibleForPrediction = true
-//                    userActivity.suggestedInvocationPhrase = "\(item.trackName)を再生"
-//                    let attributes = CSSearchableItemAttributeSet(itemContentType: kCGImageAuxiliaryDataTypePortraitEffectsMatte as String)
-//                    attributes.contentDescription = "\(item.artistName) - \(item.collectionName)"
-//                    userActivity.contentAttributeSet = attributes
-//                }
-//
-//                userActivity.becomeCurrent()
+                // Donate as User Activity
+                let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+                userActivity.isEligibleForSearch = true
+                userActivity.title = "Play \(item.trackName)"
+                userActivity.addUserInfoEntries(from: [
+                    NSUserActivity.ActivityKeys.trackName: item.trackName,
+                    NSUserActivity.ActivityKeys.previewUrl: url
+                ])
+
+                if #available(iOS 12.0, *) {
+                    userActivity.isEligibleForPrediction = true
+                    userActivity.suggestedInvocationPhrase = "Play \(item.trackName)"
+                }
+                self?.userActivity = userActivity
 
                 // Donate as Interaction
-                if #available(iOS 12.0, *) {
-                    let item = INMediaItem(identifier: url.absoluteString,
-                                           title: item.trackName,
-                                           type: .song,
-                                           artwork: nil)
-                    let intent = INPlayMediaIntent(mediaItems: [item],
-                                                   mediaContainer: nil,
-                                                   playShuffled: false,
-                                                   playbackRepeatMode: .none,
-                                                   resumePlayback: true)
-                    let interaction = INInteraction(intent: intent, response: nil)
-                    interaction.donate(completion: { error in
-                        if let error = error {
-                            print("[ERROR] \(error.localizedDescription)")
-                        }
-                    })
-                }
+//                if #available(iOS 12.0, *) {
+//                    let item = INMediaItem(identifier: url.absoluteString,
+//                                           title: item.trackName,
+//                                           type: .song,
+//                                           artwork: nil)
+//                    let intent = INPlayMediaIntent(mediaItems: [item],
+//                                                   mediaContainer: nil,
+//                                                   playShuffled: false,
+//                                                   playbackRepeatMode: .none,
+//                                                   resumePlayback: true)
+//                    let interaction = INInteraction(intent: intent, response: nil)
+//                    interaction.donate(completion: { error in
+//                        if let error = error {
+//                            print("[ERROR] \(error.localizedDescription)")
+//                        }
+//                    })
+//                }
             })
             .disposed(by: self.bag)
 
@@ -143,5 +140,12 @@ extension LookupViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension NSUserActivity {
+    public struct ActivityKeys {
+        public static let trackName = "trackName"
+        public static let previewUrl = "previewUrl"
     }
 }
