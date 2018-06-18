@@ -56,14 +56,17 @@ final class ControlViewController: UIViewController {
                     return
             }
 
-            // Create interaction
-            let item = INMediaItem(identifier: previewUrl.absoluteString, title: trackName, type: .song, artwork: nil)
-            let intent = INPlayMediaIntent(mediaItems: [item], mediaContainer: nil, playShuffled: false, playbackRepeatMode: .none, resumePlayback: true)
+            let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+            userActivity.isEligibleForSearch = true
+            userActivity.title = "\(trackName)を再生する"
+            userActivity.addUserInfoEntries(from: [
+                "trackName": trackName,
+                "previewUrl": previewUrl
+                ])
+            userActivity.isEligibleForPrediction = true
+            userActivity.suggestedInvocationPhrase = "\(trackName)を再生して"
 
-            // Donate Shortcut
-            guard let shortcut = INShortcut(intent: intent) else {
-                return
-            }
+            let shortcut = INShortcut(userActivity: userActivity)
             let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)
