@@ -57,10 +57,16 @@ final class ControlViewController: UIViewController {
             }
 
             // Create interaction
-            let item = INMediaItem(identifier: previewUrl.absoluteString, title: trackName, type: .song, artwork: nil)
-            let intent = INPlayMediaIntent(mediaItems: [item], mediaContainer: nil, playShuffled: false, playbackRepeatMode: .none, resumePlayback: true)
-
-            // Donate Shortcut
+            let item = INMediaItem(identifier: previewUrl.absoluteString,
+                                   title: trackName,
+                                   type: .song,
+                                   artwork: nil)
+            let intent = INPlayMediaIntent(mediaItems: [item],
+                                           mediaContainer: nil,
+                                           playShuffled: false,
+                                           playbackRepeatMode: .none,
+                                           resumePlayback: true)
+            intent.suggestedInvocationPhrase = "\(trackName)を再生して"
             guard let shortcut = INShortcut(intent: intent) else {
                 return
             }
