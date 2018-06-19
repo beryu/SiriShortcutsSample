@@ -19,7 +19,8 @@ final class ControlViewController: UIViewController {
 
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var pauseButton: UIButton!
-    @IBOutlet private weak var registerButton: UIButton!
+    @IBOutlet private weak var registerUserActivityButton: UIButton!
+    @IBOutlet private weak var registerIntentButton: UIButton!
 
     // MARK: - Private properties
 
@@ -40,14 +41,20 @@ final class ControlViewController: UIViewController {
             })
             .disposed(by: self.bag)
 
-        self.registerButton.rx.tap.asSignal()
+        self.registerUserActivityButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] _ in
-                self?.registerShortcuts()
+                self?.registerUserActivityShortcuts()
+            })
+            .disposed(by: self.bag)
+
+        self.registerIntentButton.rx.tap.asSignal()
+            .emit(onNext: { [weak self] _ in
+                self?.registerIntentShortcuts()
             })
             .disposed(by: self.bag)
     }
 
-    private func registerShortcuts() {
+    private func registerUserActivityShortcuts() {
         if #available(iOS 12.0, *) {
             let player = MusicPlayer.shared
             guard
@@ -56,7 +63,32 @@ final class ControlViewController: UIViewController {
                     return
             }
 
-            // Create interaction
+            let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
+            userActivity.isEligibleForSearch = true
+            userActivity.title = "\(trackName)を再生する"
+            userActivity.addUserInfoEntries(from: [
+                "trackName": trackName,
+                "previewUrl": previewUrl
+                ])
+            userActivity.isEligibleForPrediction = true
+            userActivity.suggestedInvocationPhrase = "\(trackName)を再生して"
+            let shortcut = INShortcut(userActivity: userActivity)
+
+            let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+
+    private func registerIntentShortcuts() {
+        if #available(iOS 12.0, *) {
+            let player = MusicPlayer.shared
+            guard
+                let trackName = player.trackName,
+                let previewUrl = player.url else {
+                    return
+            }
+
             let item = INMediaItem(identifier: previewUrl.absoluteString,
                                    title: trackName,
                                    type: .song,
@@ -70,6 +102,7 @@ final class ControlViewController: UIViewController {
             guard let shortcut = INShortcut(intent: intent) else {
                 return
             }
+
             let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)

@@ -29,19 +29,26 @@
                                 <state key="normal" title="Pause"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osy-A1-qfE">
-                                <rect key="frame" x="151.5" y="172" width="72" height="36"/>
+                                <rect key="frame" x="70.5" y="172" width="234" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Register as NSUserActivity"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEv-9K-e2e">
+                                <rect key="frame" x="107" y="228" width="161" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Register as Intents"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TEv-9K-e2e" firstAttribute="centerX" secondItem="ZqO-fR-Eku" secondAttribute="centerX" id="BDk-CE-3Nw"/>
                             <constraint firstItem="aMv-zd-hhl" firstAttribute="top" secondItem="aj8-uZ-SZ2" secondAttribute="top" constant="40" id="BaI-DA-RtZ"/>
                             <constraint firstItem="Osy-A1-qfE" firstAttribute="top" secondItem="N9g-uI-NBT" secondAttribute="bottom" constant="20" id="EmF-DB-BLF"/>
                             <constraint firstItem="aMv-zd-hhl" firstAttribute="centerX" secondItem="ZqO-fR-Eku" secondAttribute="centerX" id="FSV-aT-5Ka"/>
                             <constraint firstItem="N9g-uI-NBT" firstAttribute="top" secondItem="aMv-zd-hhl" secondAttribute="bottom" constant="20" id="Pgr-u3-fBh"/>
                             <constraint firstItem="Osy-A1-qfE" firstAttribute="centerX" secondItem="ZqO-fR-Eku" secondAttribute="centerX" id="TAV-di-49z"/>
                             <constraint firstItem="N9g-uI-NBT" firstAttribute="centerX" secondItem="ZqO-fR-Eku" secondAttribute="centerX" id="TbM-PV-ymj"/>
+                            <constraint firstItem="TEv-9K-e2e" firstAttribute="top" secondItem="Osy-A1-qfE" secondAttribute="bottom" constant="20" id="yLz-JK-yK6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aj8-uZ-SZ2"/>
                     </view>
@@ -49,7 +56,8 @@
                     <connections>
                         <outlet property="pauseButton" destination="N9g-uI-NBT" id="863-Sl-OAg"/>
                         <outlet property="playButton" destination="aMv-zd-hhl" id="Abw-Cd-01H"/>
-                        <outlet property="registerButton" destination="Osy-A1-qfE" id="sTI-IY-KaQ"/>
+                        <outlet property="registerIntentButton" destination="TEv-9K-e2e" id="pbq-bX-hrK"/>
+                        <outlet property="registerUserActivityButton" destination="Osy-A1-qfE" id="sTI-IY-KaQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8v-1K-zgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
