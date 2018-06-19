@@ -20,11 +20,9 @@ final class INPlayMediaIntentHandler: NSObject, INPlayMediaIntentHandling {
             let trackName = item.title,
             let urlString = item.identifier,
             let url = URL(string: urlString) else {
-                print("❌ NG")
                 return
         }
-        print("😉 OK: \(trackName)")
-        
+
         // Donate as User Activity
         let userActivity = NSUserActivity(activityType: "jp.blk.SiriShortcutsSample.playback-activity-type")
         userActivity.isEligibleForSearch = true

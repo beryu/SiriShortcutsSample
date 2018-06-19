@@ -26,7 +26,6 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>StreamingMediaPlayIntent</string>
 		<string>jp.blk.SiriShortcutsSample.playback-activity-type</string>
 	</array>
 	<key>UIBackgroundModes</key>

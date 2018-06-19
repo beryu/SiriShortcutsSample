@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
-		883C62F120D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */; };
-		883C62F220D5561800CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */; };
 		883C62FC20D5FB8A00CDBEF9 /* MusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
 		883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,8 +37,6 @@
 		88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF620D07D46001D0016 /* ControlViewController.swift */; };
 		88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
 		88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		88CBFB4A20D08A54001D0016 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4920D08A54001D0016 /* Intents.intentdefinition */; };
-		88CBFB4B20D08A54001D0016 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4920D08A54001D0016 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +82,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingMediaPlayIntentHandler.swift; sourceTree = "<group>"; };
 		883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
 		883C62FB20D5FB8A00CDBEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +115,6 @@
 		88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaPlayIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CBFB4020D08A3F001D0016 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		88CBFB4220D08A3F001D0016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88CBFB4920D08A54001D0016 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,8 +294,6 @@
 			children = (
 				88CBFB4020D08A3F001D0016 /* IntentHandler.swift */,
 				88CBFB4220D08A3F001D0016 /* Info.plist */,
-				88CBFB4920D08A54001D0016 /* Intents.intentdefinition */,
-				883C62F020D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift */,
 				884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */,
 			);
 			path = MediaPlayIntents;
@@ -499,7 +491,6 @@
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
 				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
 				883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */,
-				883C62F220D5561800CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */,
 				88CBFAE320CF241A001D0016 /* Structs.swift in Sources */,
 				88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */,
 				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
@@ -508,7 +499,6 @@
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
 				884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */,
-				88CBFB4A20D08A54001D0016 /* Intents.intentdefinition in Sources */,
 				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,10 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88CBFB4B20D08A54001D0016 /* Intents.intentdefinition in Sources */,
 				88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */,
 				884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */,
-				883C62F120D555A300CDBEF9 /* StreamingMediaPlayIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
