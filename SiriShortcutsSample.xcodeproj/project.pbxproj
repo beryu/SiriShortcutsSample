@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87AD2BA922B3390D00BD3894 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; };
+		87AD2BAA22B3390D00BD3894 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
 		883C62FC20D5FB8A00CDBEF9 /* MusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
@@ -17,7 +19,6 @@
 		88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB520CEAA9700D4989D /* SearchRequest.swift */; };
 		88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB620CEAA9700D4989D /* SearchResponse.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
-		88506BBD20CEAC2500D4989D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBB20CEAC2500D4989D /* Result.framework */; };
 		88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */; };
 		8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219720CF1E2C00544C8F /* LookupResponse.swift */; };
 		8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219820CF1E2C00544C8F /* LookupRequest.swift */; };
@@ -63,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				87AD2BAA22B3390D00BD3894 /* RxRelay.framework in Embed Frameworks */,
 				883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -82,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		87AD2BA822B3390D00BD3894 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
 		883C62FB20D5FB8A00CDBEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,7 +134,7 @@
 			files = (
 				88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */,
 				88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */,
-				88506BBD20CEAC2500D4989D /* Result.framework in Frameworks */,
+				87AD2BA922B3390D00BD3894 /* RxRelay.framework in Frameworks */,
 				883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */,
 				886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */,
 				886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */,
@@ -161,6 +164,7 @@
 		88506B9820CE520600D4989D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87AD2BA822B3390D00BD3894 /* RxRelay.framework */,
 				88CBFAEA20CF2838001D0016 /* Nuke.framework */,
 				886021A420CF20DC00544C8F /* RxSwift.framework */,
 				886021A220CF200F00544C8F /* RxCocoa.framework */,
@@ -458,10 +462,10 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -722,6 +726,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsSample/SiriShortcutsSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -735,7 +740,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -745,6 +750,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsSample/SiriShortcutsSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -758,7 +764,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
