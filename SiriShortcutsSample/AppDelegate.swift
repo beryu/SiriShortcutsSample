@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 import MusicPlayer
 
 @UIApplicationMain
@@ -14,8 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        INPreferences.requestSiriAuthorization { status in
+            switch status {
+            case .notDetermined, .restricted, .denied:
+                print("I can't use SiriKit")
+            case .authorized:
+                print("SiriKit is available")
+            @unknown default:
+                fatalError()
+            }
+        }
 
         return true
     }
