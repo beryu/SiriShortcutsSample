@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct LookupResponse: Decodable {
+public struct LookupResponse: Decodable {
     var results: [LookupResponseResult]
 }
 
-struct LookupResponseResult: Decodable {
-    let trackId: Int?
-    let collectionId: Int
-    let type: String
-    let trackName: String?
-    let artistName: String
-    let collectionName: String
-    let artworkUrl: String
-    let previewUrl: String?
+public struct LookupResponseResult: Decodable {
+    public let trackId: Int?
+    public let collectionId: Int
+    public let type: String
+    public let trackName: String?
+    public let artistName: String
+    public let collectionName: String
+    public let artworkUrl: String
+    public let previewUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case trackId

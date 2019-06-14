@@ -6,22 +6,22 @@
 //  Copyright © 2018 blk. All rights reserved.
 //
 
-struct EntityTrack {
-    let trackId: Int
-    let collectionId: Int
-    let trackName: String
-    let artistName: String
-    let collectionName: String
-    let artworkUrl: String
-    let previewUrl: String
+public struct EntityTrack {
+    public let trackId: Int
+    public let collectionId: Int
+    public let trackName: String
+    public let artistName: String
+    public let collectionName: String
+    public let artworkUrl: String
+    public let previewUrl: String
 
-    init(trackId: Int,
-         collectionId: Int,
-         trackName: String,
-         artistName: String,
-         collectionName: String,
-         artworkUrl: String,
-         previewUrl: String) {
+    public init(trackId: Int,
+                collectionId: Int,
+                trackName: String,
+                artistName: String,
+                collectionName: String,
+                artworkUrl: String,
+                previewUrl: String) {
         self.trackId = trackId
         self.collectionId = collectionId
         self.trackName = trackName
@@ -31,7 +31,7 @@ struct EntityTrack {
         self.previewUrl = previewUrl
     }
 
-    init(from item: LookupResponseResult) {
+    public init(from item: LookupResponseResult) {
         self.trackId = item.trackId ?? 0
         self.collectionId = item.collectionId
         self.trackName = item.trackName ?? ""
@@ -42,13 +42,13 @@ struct EntityTrack {
     }
 }
 
-struct EntityAlbum {
-    let collectionId: Int
-    let collectionName: String
-    let artistName: String
-    let artworkUrl: String
+public struct EntityAlbum {
+    public let collectionId: Int
+    public let collectionName: String
+    public let artistName: String
+    public let artworkUrl: String
 
-    init(from responseAlbum: ResponseAlbum) {
+    public init(from responseAlbum: ResponseAlbum) {
         self.collectionId = responseAlbum.collectionId
         self.collectionName = responseAlbum.collectionName
         self.artistName = responseAlbum.artistName
@@ -56,17 +56,17 @@ struct EntityAlbum {
     }
 }
 
-struct EntityAlbumDetail {
+public struct EntityAlbumDetail {
 
-    var collectionId: Int = 0
-    var artistName: String = ""
-    var collectionName: String = ""
-    var artworkUrl: String = ""
-    var tracks: [EntityTrack] = []
+    public var collectionId: Int = 0
+    public var artistName: String = ""
+    public var collectionName: String = ""
+    public var artworkUrl: String = ""
+    public var tracks: [EntityTrack] = []
 
-    init() {}
+    public init() {}
 
-    init(from lookupResponse: LookupResponse) {
+    public init(from lookupResponse: LookupResponse) {
         for result in lookupResponse.results {
             switch result.type {
             case "collection":

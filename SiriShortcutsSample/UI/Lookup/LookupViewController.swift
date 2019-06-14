@@ -14,6 +14,7 @@ import RxCocoa
 import APIKit
 import Nuke
 import MusicPlayer
+import Model
 
 final class LookupViewController: UIViewController {
 

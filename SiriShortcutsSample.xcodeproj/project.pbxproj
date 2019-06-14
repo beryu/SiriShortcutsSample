@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		87AD2BA922B3390D00BD3894 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; };
 		87AD2BAA22B3390D00BD3894 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87AD2BE322B33EC900BD3894 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2BE222B33EC900BD3894 /* IntentHandler.swift */; };
+		87AD2BE722B33EC900BD3894 /* SiriPlayIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 87AD2BE022B33EC900BD3894 /* SiriPlayIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		87AD2BF422B358FC00BD3894 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 87AD2BF222B358FC00BD3894 /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87AD2BF722B358FC00BD3894 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BF022B358FC00BD3894 /* Model.framework */; };
+		87AD2BF822B358FC00BD3894 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BF022B358FC00BD3894 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87AD2BFC22B3590800BD3894 /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */; };
+		87AD2BFD22B3590800BD3894 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE220CF241A001D0016 /* Structs.swift */; };
+		87AD2BFE22B3595700BD3894 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
+		87AD2BFF22B3595700BD3894 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87AD2C0122B3598100BD3894 /* SearchAlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB620CEAA9700D4989D /* SearchAlbumResponse.swift */; };
+		87AD2C0222B3598600BD3894 /* SearchAlbumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB520CEAA9700D4989D /* SearchAlbumRequest.swift */; };
+		87AD2C0322B3598E00BD3894 /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219720CF1E2C00544C8F /* LookupResponse.swift */; };
+		87AD2C0422B3598E00BD3894 /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219820CF1E2C00544C8F /* LookupRequest.swift */; };
+		87AD2C0622B35CDE00BD3894 /* SearchTrackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2C0522B35CDE00BD3894 /* SearchTrackRequest.swift */; };
+		87AD2C0822B35D2700BD3894 /* SearchTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2C0722B35D2700BD3894 /* SearchTrackResponse.swift */; };
 		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
 		883C62FC20D5FB8A00CDBEF9 /* MusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
@@ -16,12 +31,7 @@
 		883C630520D5FB9700CDBEF9 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
 		884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
 		884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
-		88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB520CEAA9700D4989D /* SearchRequest.swift */; };
-		88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BB620CEAA9700D4989D /* SearchResponse.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
-		88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */; };
-		8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219720CF1E2C00544C8F /* LookupResponse.swift */; };
-		8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219820CF1E2C00544C8F /* LookupRequest.swift */; };
 		886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A220CF200F00544C8F /* RxCocoa.framework */; };
 		886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A420CF20DC00544C8F /* RxSwift.framework */; };
 		88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88604EA620CE13A500728B17 /* AppDelegate.swift */; };
@@ -29,7 +39,6 @@
 		88604EAC20CE13A500728B17 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAA20CE13A500728B17 /* TabBarController.storyboard */; };
 		88604EAE20CE13A800728B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAD20CE13A800728B17 /* Assets.xcassets */; };
 		88604EB120CE13A800728B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */; };
-		88CBFAE320CF241A001D0016 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE220CF241A001D0016 /* Structs.swift */; };
 		88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAE620CF264D001D0016 /* ArtworkCell.swift */; };
 		88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAE720CF264D001D0016 /* ArtworkCell.xib */; };
 		88CBFAEB20CF2838001D0016 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CBFAEA20CF2838001D0016 /* Nuke.framework */; };
@@ -41,6 +50,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		87AD2BE522B33EC900BD3894 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88604E9B20CE13A400728B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87AD2BDF22B33EC900BD3894;
+			remoteInfo = SiriPlayIntents;
+		};
+		87AD2BF522B358FC00BD3894 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88604E9B20CE13A400728B17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87AD2BEF22B358FC00BD3894;
+			remoteInfo = Model;
+		};
 		883C62FD20D5FB8A00CDBEF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88604E9B20CE13A400728B17 /* Project object */;
@@ -58,6 +81,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		87AD2C0022B3595700BD3894 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				87AD2BFF22B3595700BD3894 /* APIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		883C630420D5FB8A00CDBEF9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +99,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				87AD2BAA22B3390D00BD3894 /* RxRelay.framework in Embed Frameworks */,
+				87AD2BF822B358FC00BD3894 /* Model.framework in Embed Frameworks */,
 				883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +112,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */,
+				87AD2BE722B33EC900BD3894 /* SiriPlayIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,14 +121,22 @@
 
 /* Begin PBXFileReference section */
 		87AD2BA822B3390D00BD3894 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		87AD2BE022B33EC900BD3894 /* SiriPlayIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriPlayIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		87AD2BE222B33EC900BD3894 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		87AD2BE422B33EC900BD3894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87AD2BF022B358FC00BD3894 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87AD2BF222B358FC00BD3894 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		87AD2BF322B358FC00BD3894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87AD2C0522B35CDE00BD3894 /* SearchTrackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrackRequest.swift; sourceTree = "<group>"; };
+		87AD2C0722B35D2700BD3894 /* SearchTrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrackResponse.swift; sourceTree = "<group>"; };
 		883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
 		883C62FB20D5FB8A00CDBEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INPlayMediaIntentHandler.swift; sourceTree = "<group>"; };
 		88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsSample.entitlements; sourceTree = "<group>"; };
 		88506B9920CE520600D4989D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		88506BB520CEAA9700D4989D /* SearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
-		88506BB620CEAA9700D4989D /* SearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		88506BB520CEAA9700D4989D /* SearchAlbumRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAlbumRequest.swift; sourceTree = "<group>"; };
+		88506BB620CEAA9700D4989D /* SearchAlbumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAlbumResponse.swift; sourceTree = "<group>"; };
 		88506BBA20CEAC2500D4989D /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		88506BBB20CEAC2500D4989D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
@@ -121,6 +165,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		87AD2BDD22B33EC900BD3894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87AD2BED22B358FC00BD3894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87AD2BFE22B3595700BD3894 /* APIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		883C62F520D5FB8A00CDBEF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +197,7 @@
 				883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */,
 				886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */,
 				886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */,
+				87AD2BF722B358FC00BD3894 /* Model.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +211,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87AD2BE122B33EC900BD3894 /* SiriPlayIntents */ = {
+			isa = PBXGroup;
+			children = (
+				87AD2BE222B33EC900BD3894 /* IntentHandler.swift */,
+				87AD2BE422B33EC900BD3894 /* Info.plist */,
+			);
+			path = SiriPlayIntents;
+			sourceTree = "<group>";
+		};
+		87AD2BF122B358FC00BD3894 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87AD2BF222B358FC00BD3894 /* Model.h */,
+				88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */,
+				88CBFAE220CF241A001D0016 /* Structs.swift */,
+				8860219620CF1E2C00544C8F /* Lookup */,
+				88CBFAF220D07AA6001D0016 /* Player */,
+				88506BB420CEAA9700D4989D /* Search */,
+				87AD2BF322B358FC00BD3894 /* Info.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		883C62F920D5FB8A00CDBEF9 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,23 +270,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		88506BB320CEAA8200D4989D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				88506BBE20CEAC5900D4989D /* DecodableDataParser.swift */,
-				88CBFAE220CF241A001D0016 /* Structs.swift */,
-				8860219620CF1E2C00544C8F /* Lookup */,
-				88CBFAF220D07AA6001D0016 /* Player */,
-				88506BB420CEAA9700D4989D /* Search */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		88506BB420CEAA9700D4989D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				88506BB520CEAA9700D4989D /* SearchRequest.swift */,
-				88506BB620CEAA9700D4989D /* SearchResponse.swift */,
+				88506BB520CEAA9700D4989D /* SearchAlbumRequest.swift */,
+				88506BB620CEAA9700D4989D /* SearchAlbumResponse.swift */,
+				87AD2C0522B35CDE00BD3894 /* SearchTrackRequest.swift */,
+				87AD2C0722B35D2700BD3894 /* SearchTrackResponse.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -223,6 +296,8 @@
 				88604EA520CE13A500728B17 /* SiriShortcutsSample */,
 				88CBFB3F20D08A3F001D0016 /* MediaPlayIntents */,
 				883C62F920D5FB8A00CDBEF9 /* MusicPlayer */,
+				87AD2BE122B33EC900BD3894 /* SiriPlayIntents */,
+				87AD2BF122B358FC00BD3894 /* Model */,
 				88506B9820CE520600D4989D /* Frameworks */,
 				88604EA420CE13A500728B17 /* Products */,
 			);
@@ -234,6 +309,8 @@
 				88604EA320CE13A500728B17 /* SiriShortcutsSample.app */,
 				88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */,
 				883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */,
+				87AD2BE022B33EC900BD3894 /* SiriPlayIntents.appex */,
+				87AD2BF022B358FC00BD3894 /* Model.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +320,6 @@
 			children = (
 				88604EA620CE13A500728B17 /* AppDelegate.swift */,
 				88506BB220CEA7BA00D4989D /* UI */,
-				88506BB320CEAA8200D4989D /* Model */,
 				88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */,
 				88604EAD20CE13A800728B17 /* Assets.xcassets */,
 				88604EAF20CE13A800728B17 /* LaunchScreen.storyboard */,
@@ -282,7 +358,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Player;
+			name = Player;
+			path = ../SiriShortcutsSample/Model/Player;
 			sourceTree = "<group>";
 		};
 		88CBFAF520D07D2A001D0016 /* Control */ = {
@@ -306,6 +383,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		87AD2BEB22B358FC00BD3894 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87AD2BF422B358FC00BD3894 /* Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		883C62F320D5FB8A00CDBEF9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +402,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		87AD2BDF22B33EC900BD3894 /* SiriPlayIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87AD2BEA22B33EC900BD3894 /* Build configuration list for PBXNativeTarget "SiriPlayIntents" */;
+			buildPhases = (
+				87AD2BDC22B33EC900BD3894 /* Sources */,
+				87AD2BDD22B33EC900BD3894 /* Frameworks */,
+				87AD2BDE22B33EC900BD3894 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriPlayIntents;
+			productName = SiriPlayIntents;
+			productReference = 87AD2BE022B33EC900BD3894 /* SiriPlayIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		87AD2BEF22B358FC00BD3894 /* Model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87AD2BF922B358FC00BD3894 /* Build configuration list for PBXNativeTarget "Model" */;
+			buildPhases = (
+				87AD2BEB22B358FC00BD3894 /* Headers */,
+				87AD2BEC22B358FC00BD3894 /* Sources */,
+				87AD2BED22B358FC00BD3894 /* Frameworks */,
+				87AD2BEE22B358FC00BD3894 /* Resources */,
+				87AD2C0022B3595700BD3894 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Model;
+			productName = Model;
+			productReference = 87AD2BF022B358FC00BD3894 /* Model.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		883C62F720D5FB8A00CDBEF9 /* MusicPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 883C630120D5FB8A00CDBEF9 /* Build configuration list for PBXNativeTarget "MusicPlayer" */;
@@ -351,6 +472,8 @@
 			dependencies = (
 				88CBFB4420D08A3F001D0016 /* PBXTargetDependency */,
 				883C62FE20D5FB8A00CDBEF9 /* PBXTargetDependency */,
+				87AD2BE622B33EC900BD3894 /* PBXTargetDependency */,
+				87AD2BF622B358FC00BD3894 /* PBXTargetDependency */,
 			);
 			name = SiriShortcutsSample;
 			productName = SiriShortcutsSample;
@@ -380,10 +503,16 @@
 		88604E9B20CE13A400728B17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = blk;
 				TargetAttributes = {
+					87AD2BDF22B33EC900BD3894 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					87AD2BEF22B358FC00BD3894 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					883C62F720D5FB8A00CDBEF9 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -419,11 +548,27 @@
 				88604EA220CE13A500728B17 /* SiriShortcutsSample */,
 				88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */,
 				883C62F720D5FB8A00CDBEF9 /* MusicPlayer */,
+				87AD2BDF22B33EC900BD3894 /* SiriPlayIntents */,
+				87AD2BEF22B358FC00BD3894 /* Model */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		87AD2BDE22B33EC900BD3894 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87AD2BEE22B358FC00BD3894 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		883C62F620D5FB8A00CDBEF9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +624,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		87AD2BDC22B33EC900BD3894 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87AD2BE322B33EC900BD3894 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87AD2BEC22B358FC00BD3894 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87AD2BFD22B3590800BD3894 /* Structs.swift in Sources */,
+				87AD2C0422B3598E00BD3894 /* LookupRequest.swift in Sources */,
+				87AD2C0822B35D2700BD3894 /* SearchTrackResponse.swift in Sources */,
+				87AD2C0222B3598600BD3894 /* SearchAlbumRequest.swift in Sources */,
+				87AD2C0322B3598E00BD3894 /* LookupResponse.swift in Sources */,
+				87AD2BFC22B3590800BD3894 /* DecodableDataParser.swift in Sources */,
+				87AD2C0122B3598100BD3894 /* SearchAlbumResponse.swift in Sources */,
+				87AD2C0622B35CDE00BD3894 /* SearchTrackRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		883C62F420D5FB8A00CDBEF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,19 +659,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88506BB820CEAA9700D4989D /* SearchResponse.swift in Sources */,
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
-				8860219920CF1E2C00544C8F /* LookupResponse.swift in Sources */,
 				883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */,
-				88CBFAE320CF241A001D0016 /* Structs.swift in Sources */,
-				88506BB720CEAA9700D4989D /* SearchRequest.swift in Sources */,
-				88506BBF20CEAC5900D4989D /* DecodableDataParser.swift in Sources */,
 				88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */,
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
 				884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */,
-				8860219A20CF1E2C00544C8F /* LookupRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +681,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		87AD2BE622B33EC900BD3894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87AD2BDF22B33EC900BD3894 /* SiriPlayIntents */;
+			targetProxy = 87AD2BE522B33EC900BD3894 /* PBXContainerItemProxy */;
+		};
+		87AD2BF622B358FC00BD3894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87AD2BEF22B358FC00BD3894 /* Model */;
+			targetProxy = 87AD2BF522B358FC00BD3894 /* PBXContainerItemProxy */;
+		};
 		883C62FE20D5FB8A00CDBEF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 883C62F720D5FB8A00CDBEF9 /* MusicPlayer */;
@@ -551,6 +723,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		87AD2BE822B33EC900BD3894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				INFOPLIST_FILE = SiriPlayIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample.SiriPlayIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87AD2BE922B33EC900BD3894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				INFOPLIST_FILE = SiriPlayIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample.SiriPlayIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87AD2BFA22B358FC00BD3894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87AD2BFB22B358FC00BD3894 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		883C630220D5FB8A00CDBEF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,6 +1094,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		87AD2BEA22B33EC900BD3894 /* Build configuration list for PBXNativeTarget "SiriPlayIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87AD2BE822B33EC900BD3894 /* Debug */,
+				87AD2BE922B33EC900BD3894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87AD2BF922B358FC00BD3894 /* Build configuration list for PBXNativeTarget "Model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87AD2BFA22B358FC00BD3894 /* Debug */,
+				87AD2BFB22B358FC00BD3894 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		883C630120D5FB8A00CDBEF9 /* Build configuration list for PBXNativeTarget "MusicPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

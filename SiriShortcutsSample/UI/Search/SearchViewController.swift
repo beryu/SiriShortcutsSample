@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import Nuke
 import APIKit
+import Model
 
 final class SearchViewController: UIViewController {
 
@@ -46,7 +47,7 @@ final class SearchViewController: UIViewController {
                 guard let keyword = keyword else {
                     return
                 }
-                let request = SearchRequest(keyword: keyword)
+                let request = SearchAlbumRequest(keyword: keyword)
                 Session.send(request) { result in
                     switch result {
                     case .success(let response):

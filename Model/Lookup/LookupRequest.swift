@@ -8,39 +8,39 @@
 
 import APIKit
 
-struct LookupRequest: Request {
+public struct LookupRequest: Request {
 
-    typealias Response = LookupResponse
+    public typealias Response = LookupResponse
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
-    var path: String {
+    public var path: String {
         return "/lookup"
     }
-    var queryParameters: [String : Any]? {
+    public var queryParameters: [String : Any]? {
         return [
             "id": self.collectionId,
             "entity": "song",
             "country": "jp"
         ]
     }
-    var baseURL: URL {
+    public var baseURL: URL {
         return URL(string: "https://itunes.apple.com")!
     }
     var collectionId: Int
 
-    init(collectionId: Int) {
+    public init(collectionId: Int) {
         self.collectionId = collectionId
     }
 }
 
 extension LookupRequest {
-    var dataParser: DataParser {
+    public var dataParser: DataParser {
         return DecodableDataParser()
     }
 
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }

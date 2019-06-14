@@ -1,5 +1,5 @@
 //
-//  SearchRequest.swift
+//  SearchAlbumRequest.swift
 //  SiriShortcutsSample
 //
 //  Created by Ryuta Kibe on 2017/11/17.
@@ -8,17 +8,17 @@
 
 import APIKit
 
-struct SearchRequest: Request {
+public struct SearchAlbumRequest: Request {
 
-    typealias Response = SearchResponse
+    public typealias Response = SearchAlbumResponse
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
-    var path: String {
+    public var path: String {
         return "/search"
     }
-    var queryParameters: [String : Any]? {
+    public var queryParameters: [String : Any]? {
         return [
             "term": self.keyword,
             "media": "music",
@@ -26,22 +26,22 @@ struct SearchRequest: Request {
             "country": "jp"
         ]
     }
-    var baseURL: URL {
+    public var baseURL: URL {
         return URL(string: "https://itunes.apple.com")!
     }
-    var keyword: String
+    public var keyword: String
 
-    init(keyword: String) {
+    public init(keyword: String) {
         self.keyword = keyword
     }
 }
 
-extension SearchRequest {
-    var dataParser: DataParser {
+extension SearchAlbumRequest {
+    public var dataParser: DataParser {
         return DecodableDataParser()
     }
 
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }
