@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8721F5D422B38BDA00EF7A5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
+		8721F5D522B38BDA00EF7A5E /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87AD2BA922B3390D00BD3894 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; };
 		87AD2BAA22B3390D00BD3894 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD2BA822B3390D00BD3894 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87AD2BE322B33EC900BD3894 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2BE222B33EC900BD3894 /* IntentHandler.swift */; };
@@ -29,7 +31,6 @@
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
 		883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		883C630520D5FB9700CDBEF9 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
-		884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
 		884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
 		886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A220CF200F00544C8F /* RxCocoa.framework */; };
@@ -45,8 +46,6 @@
 		88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBFAED20CF2BE9001D0016 /* LookupViewController.storyboard */; };
 		88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */; };
 		88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF620D07D46001D0016 /* ControlViewController.swift */; };
-		88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
-		88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,16 +70,20 @@
 			remoteGlobalIDString = 883C62F720D5FB8A00CDBEF9;
 			remoteInfo = MusicPlayer;
 		};
-		88CBFB4320D08A3F001D0016 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88604E9B20CE13A400728B17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88CBFB3D20D08A3F001D0016;
-			remoteInfo = MediaPlayIntents;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8721F5D622B38BDA00EF7A5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8721F5D522B38BDA00EF7A5E /* APIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87AD2C0022B3595700BD3894 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,7 +114,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				88CBFB4520D08A3F001D0016 /* MediaPlayIntents.appex in Embed App Extensions */,
 				87AD2BE722B33EC900BD3894 /* SiriPlayIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -159,7 +161,6 @@
 		88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		88CBFAF620D07D46001D0016 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
-		88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaPlayIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CBFB4020D08A3F001D0016 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		88CBFB4220D08A3F001D0016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8721F5D422B38BDA00EF7A5E /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,13 +200,6 @@
 				886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */,
 				886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */,
 				87AD2BF722B358FC00BD3894 /* Model.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88CBFB3B20D08A3F001D0016 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				88604EA320CE13A500728B17 /* SiriShortcutsSample.app */,
-				88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */,
 				883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */,
 				87AD2BE022B33EC900BD3894 /* SiriPlayIntents.appex */,
 				87AD2BF022B358FC00BD3894 /* Model.framework */,
@@ -409,6 +403,7 @@
 				87AD2BDC22B33EC900BD3894 /* Sources */,
 				87AD2BDD22B33EC900BD3894 /* Frameworks */,
 				87AD2BDE22B33EC900BD3894 /* Resources */,
+				8721F5D622B38BDA00EF7A5E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,7 +465,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				88CBFB4420D08A3F001D0016 /* PBXTargetDependency */,
 				883C62FE20D5FB8A00CDBEF9 /* PBXTargetDependency */,
 				87AD2BE622B33EC900BD3894 /* PBXTargetDependency */,
 				87AD2BF622B358FC00BD3894 /* PBXTargetDependency */,
@@ -479,23 +473,6 @@
 			productName = SiriShortcutsSample;
 			productReference = 88604EA320CE13A500728B17 /* SiriShortcutsSample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88CBFB4820D08A3F001D0016 /* Build configuration list for PBXNativeTarget "MediaPlayIntents" */;
-			buildPhases = (
-				88CBFB3A20D08A3F001D0016 /* Sources */,
-				88CBFB3B20D08A3F001D0016 /* Frameworks */,
-				88CBFB3C20D08A3F001D0016 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MediaPlayIntents;
-			productName = MediaPlayIntents;
-			productReference = 88CBFB3E20D08A3F001D0016 /* MediaPlayIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -527,9 +504,6 @@
 							};
 						};
 					};
-					88CBFB3D20D08A3F001D0016 = {
-						CreatedOnToolsVersion = 10.0;
-					};
 				};
 			};
 			buildConfigurationList = 88604E9E20CE13A400728B17 /* Build configuration list for PBXProject "SiriShortcutsSample" */;
@@ -546,7 +520,6 @@
 			projectRoot = "";
 			targets = (
 				88604EA220CE13A500728B17 /* SiriShortcutsSample */,
-				88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */,
 				883C62F720D5FB8A00CDBEF9 /* MusicPlayer */,
 				87AD2BDF22B33EC900BD3894 /* SiriPlayIntents */,
 				87AD2BEF22B358FC00BD3894 /* Model */,
@@ -585,13 +558,6 @@
 				88CBFAEE20CF2BE9001D0016 /* LookupViewController.storyboard in Resources */,
 				88CBFAE920CF264D001D0016 /* ArtworkCell.xib in Resources */,
 				88604EAC20CE13A500728B17 /* TabBarController.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88CBFB3C20D08A3F001D0016 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,15 +635,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88CBFB3A20D08A3F001D0016 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88CBFB4120D08A3F001D0016 /* IntentHandler.swift in Sources */,
-				884C2CB920D6117B00485828 /* INPlayMediaIntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -695,11 +652,6 @@
 			isa = PBXTargetDependency;
 			target = 883C62F720D5FB8A00CDBEF9 /* MusicPlayer */;
 			targetProxy = 883C62FD20D5FB8A00CDBEF9 /* PBXContainerItemProxy */;
-		};
-		88CBFB4420D08A3F001D0016 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88CBFB3D20D08A3F001D0016 /* MediaPlayIntents */;
-			targetProxy = 88CBFB4320D08A3F001D0016 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -728,6 +680,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SiriPlayIntents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,6 +705,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SiriPlayIntents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1049,48 +1009,6 @@
 			};
 			name = Release;
 		};
-		88CBFB4620D08A3F001D0016 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8A7X4PEZU7;
-				INFOPLIST_FILE = MediaPlayIntents/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.blk.SiriShortcutsSample.${SAMPLE_CODE_DISAMBIGUATOR}.MediaPlayIntents";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SAMPLE_CODE_DISAMBIGUATOR = "${DEVELOPMENT_TEAM}";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		88CBFB4720D08A3F001D0016 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8A7X4PEZU7;
-				INFOPLIST_FILE = MediaPlayIntents/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.blk.SiriShortcutsSample.${SAMPLE_CODE_DISAMBIGUATOR}.MediaPlayIntents";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SAMPLE_CODE_DISAMBIGUATOR = "${DEVELOPMENT_TEAM}";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1135,15 +1053,6 @@
 			buildConfigurations = (
 				88604EB620CE13A800728B17 /* Debug */,
 				88604EB720CE13A800728B17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88CBFB4820D08A3F001D0016 /* Build configuration list for PBXNativeTarget "MediaPlayIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88CBFB4620D08A3F001D0016 /* Debug */,
-				88CBFB4720D08A3F001D0016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,25 +7,53 @@
 //
 
 import Intents
+import APIKit
+import Model
 
-final class IntentHandler: INExtension, INPlayMediaIntentHandling {
-
-    override func handler(for intent: INIntent) -> Any {
-        // This is the default implementation.  If you want different objects to handle different intents,
-        // you can override this and return the handler you want for that particular intent.
-        
-        return self
+final class IntentHandler: INExtension {
+    private func resolveMediaItem(for optionalMediaSearch: INMediaSearch?, completion: @escaping (INMediaItem?) -> Void) {
+        guard let keyword = optionalMediaSearch?.mediaName else {
+            completion(nil)
+            return
+        }
+        let request = SearchTrackRequest(keyword: keyword)
+        Session.send(request) { result in
+            switch result {
+            case .success(let response):
+                guard let responseTrack = response.results.first else {
+                    completion(nil)
+                    return
+                }
+                let image: INImage?
+                if let url = URL(string: responseTrack.previewUrl ?? "") {
+                    image = INImage(url: url)
+                } else {
+                    image = nil
+                }
+                let item = INMediaItem(
+                    identifier: "\(responseTrack.previewUrl ?? "")",
+                    title: responseTrack.trackName ?? "",
+                    type: .song,
+                    artwork: image)
+                completion(item)
+            case .failure(let error):
+                switch error {
+                case .connectionError(let connectionError):
+                    NSLog(connectionError.localizedDescription)
+                case .requestError(let requestError):
+                    NSLog(requestError.localizedDescription)
+                case .responseError(let responseError):
+                    NSLog(responseError.localizedDescription)
+                }
+            }
+        }
     }
+}
 
-    func resolveMediaItems(for intent: INPlayMediaIntent, with completion: @escaping ([INPlayMediaMediaItemResolutionResult]) -> Void) {
-        completion([INPlayMediaMediaItemResolutionResult.unsupported()])
-    }
-    
+extension IntentHandler: INPlayMediaIntentHandling {
+
     func handle(intent: INPlayMediaIntent, completion: @escaping (INPlayMediaIntentResponse) -> Void) {
         completion(INPlayMediaIntentResponse(code: .handleInApp, userActivity: nil))
     }
 
-    private func resolveMediaItem(for intent: INAddMediaIntent, with completion: @escaping (INMediaItem?) -> Void) {
-        
-    }
 }
