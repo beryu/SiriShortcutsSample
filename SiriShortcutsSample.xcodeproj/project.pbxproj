@@ -26,12 +26,10 @@
 		87AD2C0422B3598E00BD3894 /* LookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860219820CF1E2C00544C8F /* LookupRequest.swift */; };
 		87AD2C0622B35CDE00BD3894 /* SearchTrackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2C0522B35CDE00BD3894 /* SearchTrackRequest.swift */; };
 		87AD2C0822B35D2700BD3894 /* SearchTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AD2C0722B35D2700BD3894 /* SearchTrackResponse.swift */; };
-		883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFB4020D08A3F001D0016 /* IntentHandler.swift */; };
 		883C62FC20D5FB8A00CDBEF9 /* MusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		883C62FF20D5FB8A00CDBEF9 /* MusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; };
 		883C630020D5FB8A00CDBEF9 /* MusicPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		883C630520D5FB9700CDBEF9 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */; };
-		884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */; };
 		88506BBC20CEAC2500D4989D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88506BBA20CEAC2500D4989D /* APIKit.framework */; };
 		886021A320CF200F00544C8F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A220CF200F00544C8F /* RxCocoa.framework */; };
 		886021A520CF20DC00544C8F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886021A420CF20DC00544C8F /* RxSwift.framework */; };
@@ -134,7 +132,6 @@
 		883C62F820D5FB8A00CDBEF9 /* MusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883C62FA20D5FB8A00CDBEF9 /* MusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
 		883C62FB20D5FB8A00CDBEF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INPlayMediaIntentHandler.swift; sourceTree = "<group>"; };
 		88506B8520CE491900D4989D /* SiriShortcutsSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsSample.entitlements; sourceTree = "<group>"; };
 		88506B9920CE520600D4989D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		88506BB520CEAA9700D4989D /* SearchAlbumRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAlbumRequest.swift; sourceTree = "<group>"; };
@@ -161,8 +158,7 @@
 		88CBFAEF20CF2BF0001D0016 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		88CBFAF320D07AB5001D0016 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		88CBFAF620D07D46001D0016 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
-		88CBFB4020D08A3F001D0016 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		88CBFB4220D08A3F001D0016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D20AF522B5E92600436C40 /* SiriPlayIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriPlayIntents.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +205,7 @@
 		87AD2BE122B33EC900BD3894 /* SiriPlayIntents */ = {
 			isa = PBXGroup;
 			children = (
+				88D20AF522B5E92600436C40 /* SiriPlayIntents.entitlements */,
 				87AD2BE222B33EC900BD3894 /* IntentHandler.swift */,
 				87AD2BE422B33EC900BD3894 /* Info.plist */,
 			);
@@ -289,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				88604EA520CE13A500728B17 /* SiriShortcutsSample */,
-				88CBFB3F20D08A3F001D0016 /* MediaPlayIntents */,
 				883C62F920D5FB8A00CDBEF9 /* MusicPlayer */,
 				87AD2BE122B33EC900BD3894 /* SiriPlayIntents */,
 				87AD2BF122B358FC00BD3894 /* Model */,
@@ -362,16 +358,6 @@
 				88CBFAF620D07D46001D0016 /* ControlViewController.swift */,
 			);
 			path = Control;
-			sourceTree = "<group>";
-		};
-		88CBFB3F20D08A3F001D0016 /* MediaPlayIntents */ = {
-			isa = PBXGroup;
-			children = (
-				88CBFB4020D08A3F001D0016 /* IntentHandler.swift */,
-				88CBFB4220D08A3F001D0016 /* Info.plist */,
-				884C2CB820D6117B00485828 /* INPlayMediaIntentHandler.swift */,
-			);
-			path = MediaPlayIntents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,12 +612,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88604EA920CE13A500728B17 /* SearchViewController.swift in Sources */,
-				883C62C020D4DE1700CDBEF9 /* IntentHandler.swift in Sources */,
 				88604EA720CE13A500728B17 /* AppDelegate.swift in Sources */,
 				88CBFAE820CF264D001D0016 /* ArtworkCell.swift in Sources */,
 				88CBFAF020CF2BF0001D0016 /* LookupViewController.swift in Sources */,
 				88CBFAF720D07D46001D0016 /* ControlViewController.swift in Sources */,
-				884C2CBA20D6128800485828 /* INPlayMediaIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +662,7 @@
 		87AD2BE822B33EC900BD3894 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriPlayIntents/SiriPlayIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -703,6 +688,7 @@
 		87AD2BE922B33EC900BD3894 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriPlayIntents/SiriPlayIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -967,6 +953,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SiriShortcutsSample/SiriShortcutsSample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -980,6 +967,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -991,6 +979,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SiriShortcutsSample/SiriShortcutsSample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8A7X4PEZU7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1004,6 +993,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.blk.SiriShortcutsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

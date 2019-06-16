@@ -11,7 +11,7 @@ import APIKit
 import Model
 
 final class IntentHandler: INExtension {
-    private func resolveMediaItem(for optionalMediaSearch: INMediaSearch?, completion: @escaping (INMediaItem?) -> Void) {
+    func resolveMediaItem(for optionalMediaSearch: INMediaSearch?, completion: @escaping (INMediaItem?) -> Void) {
         guard let keyword = optionalMediaSearch?.mediaName else {
             completion(nil)
             return
@@ -51,6 +51,15 @@ final class IntentHandler: INExtension {
 }
 
 extension IntentHandler: INPlayMediaIntentHandling {
+    func resolveMediaItems(for intent: INPlayMediaIntent, with completion: @escaping ([INPlayMediaMediaItemResolutionResult]) -> Void) {
+        resolveMediaItem(for: intent.mediaSearch) { optionalMediaItem in
+            guard let mediaItem = optionalMediaItem else {
+                completion([INPlayMediaMediaItemResolutionResult.unsupported()])
+                return
+            }
+            completion([INPlayMediaMediaItemResolutionResult.success(with: mediaItem)])
+        }
+    }
 
     func handle(intent: INPlayMediaIntent, completion: @escaping (INPlayMediaIntentResponse) -> Void) {
         completion(INPlayMediaIntentResponse(code: .handleInApp, userActivity: nil))

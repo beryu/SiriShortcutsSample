@@ -33,6 +33,10 @@
 				<string>INPlayMediaIntent</string>
 				<string>INAddMediaIntent</string>
 			</array>
+			<key>SupportedMediaCategories</key>
+			<array>
+				<string>INMediaCategoryMusic</string>
+			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.intents-service</string>
