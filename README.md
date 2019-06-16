@@ -1,18 +1,14 @@
-# SiriShortcutsSample
-Sample application to try implementing SiriShortcuts.
+# Sample for playback any songs with Siri
+Sample application to try implementing playback songs from iTunes Search API with SiriKit Media Intents.
 
 ## Requirements
-* Xcode10
-* iOS 12.0
+* Xcode11
+* iOS 13.0 or iPadOS 13.0
 
-This application is tested by Xcode10 beta1 and iOS12 beta1.
+This application is tested by Xcode11 beta1 and iPadOS beta1.
 
 ## Usage
-1. Search albums on Search tab
-2. Select any album
-3. Select any track and playback
-4. Tap "Register as NSUserActivity" or "Register as Intents" on More tab
-5. Register My Shortcuts on shown page
-6. Call Siri
-7. Tell shortcuts that your registered
-
+1. Open SiriSample app
+2. Approve permissions of Siri when showing dialog
+3. Say "Play the song {SongTitle} in SiriSample" to Siri
+4. Playback will start if songs are found with song title
